@@ -28,6 +28,17 @@ document.onkeyup = function(event){
     console.log("Guess: " + userGuess);
     console.log("Correct letter: " + randomLetter);
 
+    // alert if not a letter
+if (!letterArray.includes(userGuess)) {
+    console.log("User pressed: " + userGuess + " Not a letter.");
+    alert("Please press a letter, not a special key.");
+}
+
+// alert if already picked that letter
+if (guessesMade.includes(userGuess)) {
+    console.log(userGuess + " was already guessed.");
+    alert("You already guessed " + userGuess + ". Pick another letter.");
+}
 
 //if userGuess matches random letter then add one to wins and reset 
 
